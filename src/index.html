@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Оптика</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png" />
+    <link rel="icon" sizes="48x48" href="favicon-48x48.png" type="image/png" />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link href="styles/styles.min.css" rel="stylesheet" />
+</head>
+<body>
+@@include("./components/header/header.html")
+<main>
+    @@include("./components/intro/intro.html")
+    @@include("./components/qr-slider/qr-slider.html", { "class": "has-bg", "title": true, "num": "1"})
+    @@include("./components/signs/signs.html")
+    @@include("./components/problems/problems.html")
+    @@include("./components/methods/methods.html")
+    @@include("./components/services/services.html")
+    @@include("./components/team/team.html")
+    @@include("./components/tools/tools.html")
+    @@include("./components/qr-slider/qr-slider.html", { "class": "qr-slider-section", "title": false, "num": "2"})
+    @@include("./components/feedback/feedback.html")
+</main>
+@@include("./components/footer/footer.html")
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

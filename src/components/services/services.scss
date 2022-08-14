@@ -1,0 +1,47 @@
+.services {
+  padding-top: rem(100);
+  padding-bottom: rem(129);
+
+  background-color: $bg-accent;
+
+  @include to($md) {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+  }
+}
+
+.services__title {
+  margin-bottom: rem(113);
+
+  color: $contrast;
+  font-weight: 700;
+
+  @include to($md) {
+    margin-bottom: rem(40);
+  }
+
+  @include to($sm) {
+    margin-bottom: rem(50);
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.services__img {
+  max-width: 100%;
+  height: auto;
+
+  &--desktop {
+    @include to($md) {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    @include from($md + 1px) {
+      display: none;
+    }
+  }
+}

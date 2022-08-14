@@ -1,0 +1,13 @@
+.container {
+  width: 78rem;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: rem(10);
+  padding-left: rem(10);
+
+  @include sm-block {
+    padding-right: rem(24);
+    padding-left: rem(24);
+  }
+}

@@ -1,0 +1,72 @@
+.methods {
+  height: rem(1034);
+  padding-top: rem(60);
+
+  background-color: $bg-secondary;
+
+  @include to($lg) {
+    padding-bottom: rem(60);
+  }
+
+  @include to($tb) {
+    height: rem(989);
+  }
+
+  @include to($sm) {
+    height: rem(781);
+    padding-bottom: rem(40);
+  }
+}
+
+.methods__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.methods__title {
+  color: $primary;
+  font-weight: 700;
+}
+
+.methods__media {
+  position: relative;
+  flex-grow: 1;
+  margin-top: rem(-90);
+  overflow: hidden;
+
+  scrollbar-color: $accent1 transparentize($accent1, 0.85);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparentize($accent1, 0.85);
+  }
+
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-thumb:hover {
+    background: $accent1;
+  }
+
+  @include to($lg) {
+    overflow-x: auto;
+  }
+}
+
+.methods__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+
+  @include from($lg + 1px) {
+    max-width: 100%;
+  }
+}

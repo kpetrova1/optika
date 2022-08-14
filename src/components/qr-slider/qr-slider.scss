@@ -1,0 +1,77 @@
+.qr-slider {
+  padding-top: rem(44);
+  padding-bottom: rem(100);
+
+  @include to($sm) {
+    padding-bottom: rem(77);
+  }
+
+  &.has-bg {
+    background-image: url('../assets/circle-bg.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+}
+
+.qr-slider-section {
+  padding-top: rem(92);
+  padding-bottom: rem(92);
+
+  @include to($md) {
+    padding-top: rem(72);
+    padding-bottom: rem(82);
+  }
+
+  @include to($sm) {
+    padding-top: rem(50);
+    padding-bottom: rem(100);
+  }
+}
+
+.qr-slider__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: rem(246);
+  padding: rem(40) rem(60);
+
+  background: $bg-primary;
+  box-shadow: 0 4px 15px rgba(152, 149, 149, 0.15);
+
+  text-align: center;
+
+  @include to($md) {
+    height: rem(216);
+    padding: rem(40) rem(32);
+  }
+
+  @include to($sm) {
+    padding: rem(40) rem(22);
+  }
+}
+
+.qr-slider__text {
+  @include to($sm) {
+    font-weight: 700;
+  }
+}
+
+.title-info {
+  margin-bottom: rem(100);
+
+  color: $accent1;
+  font-weight: 700;
+
+  @include to($md) {
+    margin-bottom: rem(90);
+  }
+
+  @include to($sm) {
+    margin-bottom: rem(70);
+  }
+
+  @include from($lg) {
+    width: 60%;
+  }
+}

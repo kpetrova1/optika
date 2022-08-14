@@ -1,0 +1,120 @@
+.problems {
+  padding-top: rem(100);
+  padding-bottom: rem(100);
+
+  background-image: url('../assets/circle-bg-2.png');
+  background-repeat: no-repeat;
+  background-position: right calc(100% - #{rem(100)});
+
+  @include to($md) {
+    padding-top: rem(80);
+    padding-bottom: rem(160);
+
+    background-position: calc(100% + 2rem) calc(100% + 6rem);
+    background-size: 8rem;
+  }
+
+  @include to($sm) {
+    padding-top: rem(60);
+    padding-bottom: rem(160);
+  }
+}
+
+.problems__title {
+  margin-bottom: rem(70);
+
+  color: $primary;
+  font-weight: 700;
+
+  @include to($md) {
+    margin-bottom: rem(24);
+
+    color: $accent1;
+  }
+
+  @include from($sm) {
+    margin-bottom: rem(34);
+  }
+}
+
+.problems__container {
+  display: grid;
+  justify-content: center;
+
+  gap: rem(32);
+
+  @include from($md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.problem-item__img {
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 0.5rem;
+}
+
+.problem-item__title {
+  margin-top: rem(40);
+
+  font-weight: 400;
+  text-align: center;
+
+  @include to($tb) {
+    margin-top: rem(16);
+  }
+}
+
+.problems__percents {
+  display: grid;
+  justify-content: center;
+  margin-top: rem(36);
+
+  gap: rem(32);
+
+  @include from($md) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: rem(82);
+  }
+}
+
+.percent-item {
+  padding: rem(68) rem(68) rem(32);
+
+  border: 1px solid $accent1;
+  border-radius: 1rem;
+
+  @include to($tb) {
+    padding: rem(30) rem(30) rem(16);
+  }
+}
+
+.percent-item__main {
+  margin-top: 0;
+
+  color: $accent1;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.percent-item__num {
+  font-size: rem(196);
+
+  @include to($lg) {
+    font-size: rem(136);
+  }
+}
+
+.percent-item__sub,
+.percent-item__sup {
+  font-size: rem(88);
+
+  @include to($lg) {
+    font-size: rem(46);
+  }
+}
+
+.percent-item__sup {
+  vertical-align: 5rem;
+}

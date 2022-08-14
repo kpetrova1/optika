@@ -1,0 +1,77 @@
+.signs {
+  padding-top: rem(60);
+  padding-bottom: rem(60);
+
+  background-color: $bg-secondary;
+}
+
+.signs__title {
+  margin-bottom: rem(30);
+
+  color: $accent1;
+  font-weight: 700;
+}
+
+.signs__container {
+  display: flex;
+  align-items: center;
+  column-gap: rem(100);
+
+  @include to($tb) {
+    flex-direction: column;
+  }
+}
+
+.signs__item {
+  display: flex;
+  align-items: center;
+  column-gap: rem(22);
+
+  @include to($tb) {
+    column-gap: rem(16);
+  }
+
+  @include to($sm) {
+    column-gap: rem(10);
+  }
+
+  &::before {
+    content: '';
+
+    display: block;
+    flex-shrink: 0;
+    width: rem(30);
+    height: rem(21);
+
+    background-image: url("data:image/svg+xml,%3Csvg width='34' height='25' viewBox='0 0 34 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32.3332 1.75L11.2498 23.2917L1.6665 13.5' stroke='%230C862D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include to($tb) {
+      width: rem(24);
+      height: rem(16);
+    }
+  }
+
+  + .signs__item {
+    margin-top: rem(34);
+
+    @include to($tb) {
+      margin-top: rem(16);
+    }
+  }
+}
+
+.signs__img {
+  flex-shrink: 0;
+
+  @include to($tb) {
+    max-width: 100%;
+    height: auto;
+    margin-top: rem(40);
+  }
+
+  @include to($sm) {
+    margin-top: rem(22);
+  }
+}

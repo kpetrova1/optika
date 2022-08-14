@@ -1,0 +1,80 @@
+.intro {
+  padding-top: rem(69);
+
+  @include to($md) {
+    padding-top: rem(50);
+  }
+
+  @include to($sm) {
+    padding-top: rem(27);
+  }
+}
+
+.intro__img {
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+  object-position: top;
+}
+
+.intro__title {
+  display: inline-block;
+  margin-bottom: rem(50);
+  padding: rem(14) rem(26) rem(14) rem(12);
+
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+
+  background-color: $accent1;
+
+  color: $contrast;
+
+  font-weight: 700;
+
+  @include to($md) {
+    margin-bottom: rem(25);
+    margin-left: rem(-24);
+    padding-left: rem(24);
+  }
+
+  @include to($sm) {
+    margin-bottom: rem(30);
+    margin-left: rem(-10);
+    padding: rem(10);
+  }
+}
+
+.intro__info {
+  padding-top: rem(100);
+
+  @include to($md) {
+    font-size: rem(80);
+  }
+
+  @include to($sm) {
+    font-size: rem(30);
+  }
+}
+
+.intro__subtitle {
+  color: $accent1;
+  font-weight: 700;
+}
+
+.intro__list {
+  margin-top: rem(36);
+  margin-left: 2rem;
+
+  @include to($md) {
+    margin-top: rem(15);
+  }
+
+  @include to($sm) {
+    font-size: rem(16);
+  }
+
+  @include from($lg) {
+    width: 60%;
+  }
+}
